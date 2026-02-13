@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to..</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../Assets/slider.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Trilong|Raleway">
+    <link rel="shortcut icon" href="../Assets/logo-transparent.png" type="image/x-icon">
+    <style id = "anim"></style>
+</head>
+<body>
+    <header class="cont" id="header">
+        <a href="index.html"><img src="../Assets/logo-transparent.png" alt="Logo" width="140px" height="140px"></a>
+        <nav id="navbar">
+            <a href="index.html" active>Home</a>
+            <a href="about.html">About</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Contact Us</a>
+        </nav>
+        <nav id="hamburger">
+            <p class="line"></p>
+            <p class="line"></p>
+            <p class="line"></p>
+        </nav>
+    </header>
+
+    <div class="cont slider-container">
+        <img src="../Assets/slide1.jpg" alt="Slide" class="slide">
+        <img src="../Assets/slide2.jpg" alt="Slide" class="slide">
+        <img src="../Assets/webdev3.jpg" alt="Slide" class="slide">
+    </div>
+    <br>
+    <div class="cont article-container">
+        <img src="../Assets/webdev.jpg" alt="Background">
+        <article id = "article">
+            <div class="box">
+                <h4>More Than Just A Website - It's a Brand Statement</h4>
+            </div>
+            <div class="box" id="middle">
+                <h4>Your Satisfaction, Our Priority</h4>
+            </div>
+            <div class="box">
+                <h4>A Very Big Package Resulting From a Small Price</h4>
+            </div>
+        </article>
+    </div>
+    <div id="imgoverlay">
+        <h1>Crafting the Future, One Line Of Code At A Time...</h1>
+        <h3>Obsidian Webworks - Positivity, Precision, Performance</h3>
+    </div>
+    <br> <br>
+    <footer>
+        &copy; Obsidian Webworks LTD 2025
+        <br>
+    </footer>
+</body>
+<script src="mainscript.js"></script>
+<script src="../Assets/slider.js"></script>
+<script>
+    var title = 0;
+    document.addEventListener('DOMContentLoaded', () => {
+    setInterval(()=>{
+        title++;
+        if(title % 2 === 0 & title < 10){
+            document.title = "Welcome to.."
+        }else{
+            document.title = "Obsidian Webworks LTD"
+        }
+    }, 3000);
+    })
+
+    document.addEventListener("DOMContentLoaded", function(){
+        new Slider('.slider-container', {autoPlay: true, interval: 6000})
+    })
+
+</script>
+</html>
